@@ -1,0 +1,7 @@
+1. Install using setup.exe
+2. Copy DMC.ahk to the installed folder
+3. Open the launcher
+4. Set the controls based on controls.png
+5. Close the launcher
+6. Double click DMC.ahk
+7. Open the game directly
