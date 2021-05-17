@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>NLP Project</title>
-  </head>
-  <body>
-    {{ words }}
-  </body>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>IR-reimagined</title>
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form>
+    <div class="container center">
+        <div class="query-box boxes">
+            <ul id="query"></ul>
+        </div>
+
+
+
+        <div class="word-box boxes center">
+            <label><input id="word-input" type="text" placeholder="Enter your word here"></label>
+        </div>
+
+        <div class="add" onclick="addWord()"></div>
+
+        <div class="operator-box boxes center">
+            <label><input class="operator" onclick="addOp(this)" type="button" value="AND"></label>
+            <label><input class="operator" onclick="addOp(this)" type="button" value="OR"></label>
+            <label><input class="operator" onclick="addOp(this)" type="button" value="NOT"></label>
+        </div>
+
+
+
+        <input class="search-button boxes" type="submit" value="Search">
+    </div>
+    </form>
+</body>
+<script src="{% static 'main/js/script.js' %}"></script>
 </html>
