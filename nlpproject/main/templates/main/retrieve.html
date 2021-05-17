@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    {% load static %}
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <title>Output</title>
   </head>
-  <body>
-    <p>input_query: {{ input_query }}</p>
-    <p>query_words: {{ query_words }}</p>
-    <p>connect: {{ connect }}</p>
-    <p>values: {{ values }}</p>
-    <p>files: {{ files }}</p>
+  <body onload="filesOutput({{ input_query }}, {{ files }})">
+    <div class="container center">
+      <div class="query-box boxes center">
+        <ul id="query-list"></ul>
+      </div>
+    </div>
+    <div class="container center nomargin">
+      <div class="query-box boxes center">
+        <ul id="output-list"></ul>
+      </div>
+    </div>
+    <div class="container center nomargin">
+      <div class="boxes center">
+        <input class="search-button boxes" onclick="goBack()" type="button" value="Home">
+      </div>
+    </div>
   </body>
+  <script src="{% static 'main/js/script.js' %}"></script>
 </html>

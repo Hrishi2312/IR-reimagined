@@ -47,3 +47,20 @@ function sendQuery() {
         alert("Operator should have an ending word!");
     }
 }
+function goBack() {
+  window.history.back();
+}
+function filesOutput(input_query, files) {
+  var ulQuery = document.getElementById("query-list");
+  var ul = document.getElementById("output-list");
+  for(f in files) {
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(files[f]));
+      ul.appendChild(li);
+  }
+  for(q in input_query) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(input_query[q]));
+    ulQuery.appendChild(li);
+  }
+}

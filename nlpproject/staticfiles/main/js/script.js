@@ -47,3 +47,14 @@ function sendQuery() {
         alert("Operator should have an ending word!");
     }
 }
+function goBack() {
+  window.history.back();
+}
+function filesOutput(files) {
+  var ul = document.getElementById("query-list");
+  for(f in files) {
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(files[f]));
+      ul.appendChild(li);
+  }
+}

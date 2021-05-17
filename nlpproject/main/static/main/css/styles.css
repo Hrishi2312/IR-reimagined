@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    margin-top: 150px;
+    margin-top: 20px;
     flex-direction: column;
     position: relative;
 }
@@ -112,4 +112,20 @@ input[type=submit], input[type=button], .add{
 
 input[type=submit]:hover, input[type=button]:hover{
     background-color: #00FF74;
+}
+
+
+.op-query {
+    margin: 100px;
+    background-color: #A7FFCF;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+.nomargin {
+    margin: 0;
 }

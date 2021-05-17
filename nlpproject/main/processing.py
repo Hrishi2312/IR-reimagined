@@ -55,7 +55,9 @@ def processing(query):
             bitwise_op = [w1 & w2 for (w1,w2) in zip(word_list1,bitwise_op)]
         zeroes_and_ones_of_all_words.insert(0, bitwise_op);
 
-    lis = zeroes_and_ones_of_all_words[0]
+    lis = []
+    if zeroes_and_ones_of_all_words:
+        lis = zeroes_and_ones_of_all_words[0]
     cnt = 1
     for index in lis:
         if index == 1:

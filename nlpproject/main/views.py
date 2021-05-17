@@ -11,13 +11,15 @@ def retrieve(request):
     if request.method == 'POST':
         query = request.POST['query']
         output = processing(query)
-    input_query = output[0][0]
+    connect = []
+    files = []
+    input_query = output[0]
     query_words = output[1]
-    connect = ''
     if output[2]:
         connect = output[2]
     values = output[3]
-    files = output[4]
+    if output[4]:
+        files = output[4]
     context = {'input_query': input_query,
                'query_words': query_words,
                'connect': connect,
