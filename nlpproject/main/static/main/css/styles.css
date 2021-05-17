@@ -34,6 +34,20 @@ body {
     margin: 50px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    background-color: #A7FFCF;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
 .word-box {
     width: 500px;
     height: 130px;

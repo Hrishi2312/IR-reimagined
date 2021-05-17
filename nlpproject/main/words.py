@@ -36,7 +36,6 @@ def remove_special_characters(text):
     return text_returned
 
 for file in glob.glob(file_folder):
-    print(file)
     fname = file
     file = open(file , "r")
     text = file.read()

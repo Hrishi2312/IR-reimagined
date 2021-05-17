@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
+    <form id="query-form" action="retrieve" method="POST">
+    {% csrf_token %}
     <div class="container center">
-        <div class="query-box boxes">
-            <ul id="query"></ul>
+        <div class="query-box boxes center">
+            <ul id="query-list"></ul>
         </div>
 
 
@@ -30,8 +31,8 @@
         </div>
 
 
-
-        <input class="search-button boxes" type="submit" value="Search">
+        <label><input id="query" name="query" hidden></label>
+        <input class="search-button boxes" onclick="sendQuery()" type="button" value="Search">
     </div>
     </form>
 </body>
